@@ -45,6 +45,7 @@ gulp.task('build:package', ['clean'], function () {
 gulp.task('build', ['build:lib', 'build:docs', 'build:package']);
 
 gulp.task('standalone', ['build:lib'], function (done) {
+    console.log(22);
     var builder = require('browserify')({
         basedir:    path.join(__dirname, 'build'),
         standalone: 'autoprefixer'
